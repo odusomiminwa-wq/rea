@@ -69,8 +69,8 @@ export default function TikTokAccount() {
           <div className="tiktok-metrics">
             <div><small>ACCOUNT-RELATIVE SCORE</small><strong>{report.accountScore ?? "—"}<em>/100</em></strong></div>
             <div><small>POSTS ANALYSED</small><strong>{report.videos.length}</strong></div>
-            <div><small>MEDIAN VIEWS</small><strong>{number(report.baseline.views)}</strong></div>
-            <div><small>MEDIAN ENGAGEMENT</small><strong>{pct(report.baseline.engagementRate)}</strong></div>
+            <div><small>MEDIAN VIEWS</small><strong>{number(report.baseline?.views ?? 0)}</strong></div>
+            <div><small>MEDIAN ENGAGEMENT</small><strong>{pct(report.baseline?.engagementRate ?? 0)}</strong></div>
           </div>
           <p className="method-note">{report.evidence}</p>
           <div className="tiktok-video-list">
