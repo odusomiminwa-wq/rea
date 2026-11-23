@@ -30,7 +30,7 @@ export function scoreTikTokVideos(videos) {
     const viewsSignal = relative(video.views, baseline.views);
     const engagementSignal = relative(video.engagementRate, baseline.engagementRate);
     const shareSignal = relative(video.shareRate, baseline.shareRate);
-    const score = Math.round(Math.min(100, (viewsSignal * 35 + engagementSignal * 40 + shareSignal * 25) * 50));
+    const score = Math.round(Math.min(100, (viewsSignal * 35 + engagementSignal * 40 + shareSignal * 25) / 2));
     return { ...video, accountRelativeScore: score };
   }).sort((a, b) => b.accountRelativeScore - a.accountRelativeScore);
 
