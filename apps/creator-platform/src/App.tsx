@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import TikTokAccount from "./components/TikTokAccount";
 
 type VideoFacts = {
   name: string;
@@ -208,6 +209,7 @@ export default function App() {
               </section>
 
               <section className="notice"><span className="notice-icon">i</span><p><strong>Early MVP:</strong> This report uses video metadata and your answers to apply a visible checklist. It is not AI vision analysis, real retention data, or a prediction of views.</p></section>
+              <TikTokAccount />
 
               <div className="analyst-grid">
                 <section className="panel upload-panel">
